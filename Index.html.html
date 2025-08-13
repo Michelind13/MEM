@@ -1,0 +1,1258 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Middle East Machines - Máquinas de Inyección para Suelas</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #20b3a3; /* Azul verdoso */
+            --secondary: #1a8e80; /* Azul verdoso oscuro */
+            --accent: #eb6e21; /* Naranja */
+            --light: #f8f9fa;
+            --dark: #212529;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--secondary), var(--primary));
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo h1 {
+            font-size: 1.8rem;
+            margin-left: 10px;
+        }
+        
+        .logo-icon {
+            font-size: 2.5rem;
+            color: var(--accent);
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 20px;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 8px 12px;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+        
+        nav ul li a:hover {
+            background-color: rgba(255,255,255,0.1);
+        }
+        
+        .hero {
+            background: url('https://i.postimg.cc/kGMPdwGH/MAQUINA-BICOLOR.jpg') no-repeat center center/cover;
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            color: white;
+            text-align: center;
+            position: relative;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.6);
+        }
+        
+        .hero-content {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .hero h2 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--accent);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn:hover {
+            background-color: #d45d15;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            color: var(--secondary);
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background-color: var(--accent);
+        }
+        
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+        
+        .about-text {
+            flex: 1;
+        }
+        
+        .about-text h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--secondary);
+        }
+        
+        .about-features {
+            flex: 1;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+        
+        .feature-card {
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+            text-align: center;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--accent);
+            margin-bottom: 15px;
+        }
+        
+        .feature-card h4 {
+            margin-bottom: 10px;
+            color: var(--primary);
+        }
+        
+        /* Nueva sección: ¿Por qué elegirnos? */
+        .choose-us {
+            background-color: #f0f8f7;
+            padding: 60px 0;
+        }
+        
+        .choose-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+        
+        .choose-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            width: 100%;
+        }
+        
+        .choose-card {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            text-align: center;
+            width: 100%;
+            max-width: 350px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .choose-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+        .choose-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            border-radius: 50%;
+            color: white;
+            font-size: 2.5rem;
+        }
+        
+        .products {
+            background-color: #f0f4f8;
+        }
+        
+        .product-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+        }
+        
+        .product-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 550px;
+            transition: transform 0.3s ease;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .product-header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .product-header h3 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+        
+        .product-body {
+            padding: 25px;
+        }
+        
+        .specs-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        .specs-table th, .specs-table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        .specs-table th {
+            background-color: #f5f5f5;
+            font-weight: 600;
+        }
+        
+        .specs-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        
+        /* Galería de imágenes */
+        .gallery {
+            background-color: #fff;
+        }
+        
+        .gallery-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        
+        .gallery-item {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            height: 300px;
+            width: calc(33.333% - 20px);
+            position: relative;
+            min-width: 300px;
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+        
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.7));
+            color: white;
+            padding: 20px;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+        
+        .gallery-item:hover .gallery-overlay {
+            transform: translateY(0);
+        }
+        
+        .contact {
+            background: linear-gradient(135deg, var(--secondary), var(--primary));
+            color: white;
+        }
+        
+        .contact .section-title h2 {
+            color: white;
+        }
+        
+        .contact-content {
+            display: flex;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        
+        .contact-info {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .contact-info h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+        
+        .contact-details {
+            margin-bottom: 30px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 15px;
+        }
+        
+        .contact-icon {
+            font-size: 1.5rem;
+            margin-right: 15px;
+            color: var(--accent);
+        }
+        
+        .whatsapp-contact {
+            background-color: var(--accent);
+            padding: 25px;
+            border-radius: 10px;
+            text-align: center;
+            margin-top: 20px;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        
+        .whatsapp-contact .btn {
+            background-color: white;
+            color: var(--accent);
+            margin-top: 15px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .whatsapp-contact .btn:hover {
+            background-color: #f0f0f0;
+        }
+        
+        .map {
+            flex: 1;
+            min-width: 300px;
+            height: 400px;
+            background-color: #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 50px 0 20px;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            margin-bottom: 30px;
+        }
+        
+        .footer-section {
+            flex: 1;
+            min-width: 250px;
+        }
+        
+        .footer-section h3 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-section h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background-color: var(--accent);
+        }
+        
+        .footer-section p {
+            margin-bottom: 10px;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            color: white;
+            transition: all 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            background-color: var(--accent);
+            transform: translateY(-5px);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.9rem;
+            color: #aaa;
+        }
+        
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25D366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            z-index: 100;
+            animation: pulse 2s infinite;
+            text-decoration: none;
+        }
+        
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+            }
+        }
+        
+        @media (max-width: 992px) {
+            .gallery-item {
+                width: calc(50% - 20px);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            nav ul {
+                margin-top: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            nav ul li {
+                margin: 5px;
+            }
+            
+            .hero h2 {
+                font-size: 2.2rem;
+            }
+            
+            .hero p {
+                font-size: 1.2rem;
+            }
+            
+            .about-content {
+                flex-direction: column;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+            
+            .choose-card {
+                min-width: 100%;
+            }
+            
+            .gallery-item {
+                width: 100%;
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Botón flotante de WhatsApp -->
+    <a href="https://wa.me/524778960170" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Encabezado -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-industry logo-icon"></i>
+                    <h1>Middle East Machines</h1>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#nosotros">Nosotros</a></li>
+                        <li><a href="#productos">Productos</a></li>
+                        <li><a href="#galeria">Galería</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="inicio">
+        <div class="hero-content">
+            <h2>Máquinas de Inyección para Fabricación de Suelas</h2>
+            <p>Especialistas en maquinaria de alta calidad importada desde Turquía</p>
+            <a href="#productos" class="btn">Ver Modelos</a>
+        </div>
+    </section>
+
+    <!-- Sobre Nosotros -->
+    <section id="nosotros">
+        <div class="container">
+            <div class="section-title">
+                <h2>Sobre Nosotros</h2>
+                <p>Más de una década de experiencia en la industria</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Líderes en maquinaria para la fabricación de suelas</h3>
+                    <p>Middle East Machines es una empresa con más de 10 años de experiencia especializada en la importación de maquinaria de alta calidad desde Turquía para la fabricación de suelas. Contamos clientes satisfechos que avalan la calidad de nuestros productos y servicios.</p>
+                    <p>Nuestra misión es proporcionar soluciones tecnológicas avanzadas que aumenten la productividad de nuestros clientes, ofreciendo siempre el mejor soporte técnico y asesoramiento especializado.</p>
+                    <p>Entendemos las necesidades de capital de nuestros clientes, por lo que siempre estamos dispuestos a negociar opciones de financiamiento personalizadas que no descapitalicen la liquidez de su negocio.</p>
+                </div>
+                <div class="about-features">
+                    <div class="feature-card">
+                        <i class="fas fa-globe-americas feature-icon"></i>
+                        <h4>Importación desde Turquía</h4>
+                        <p>Máquinas de última generación directamente de los mejores fabricantes turcos</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-cogs feature-icon"></i>
+                        <h4>10+ Años de Experiencia</h4>
+                        <p>Década de experiencia importando y comercializando maquinaria especializada</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-users feature-icon"></i>
+                        <h4>Clientes Satisfechos</h4>
+                        <p>Las empresas confían en nuestros productos y servicios</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-hand-holding-usd feature-icon"></i>
+                        <h4>Opciones de Financiamiento</h4>
+                        <p>Soluciones financieras personalizadas para su inversión</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ¿Por qué elegirnos? -->
+    <section class="choose-us">
+        <div class="container">
+            <div class="section-title">
+                <h2>¿Por qué elegirnos?</h2>
+                <p>Ventajas que nos diferencian de la competencia</p>
+            </div>
+            
+            <div class="choose-container">
+                <div class="choose-row">
+                    <div class="choose-card">
+                        <div class="choose-icon">
+                            <i class="fas fa-shipping-fast"></i>
+                        </div>
+                        <h3>Envío Rápido</h3>
+                        <p>Entregas seguras y a tiempo garantizadas para que tu producción no se detenga.</p>
+                    </div>
+                    
+                    <div class="choose-card">
+                        <div class="choose-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <h3>Soporte 24/7</h3>
+                        <p>Asistencia técnica siempre disponible para resolver cualquier inconveniente.</p>
+                    </div>
+                    
+                    <div class="choose-card">
+                        <div class="choose-icon">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <h3>Servicio Técnico</h3>
+                        <p>Expertos a tu servicio para mantenimiento, reparaciones y capacitación.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Productos -->
+    <section id="productos" class="products">
+        <div class="container">
+            <div class="section-title">
+                <h2>Nuestros Productos</h2>
+                <p>Máquinas de inyección de alto rendimiento</p>
+            </div>
+            <div class="product-container">
+                <!-- Modelo TRICOLOR -->
+                <div class="product-card">
+                    <div class="product-header">
+                        <h3>MODELO TRICOLOR</h3>
+                        <p>Máquina para fabricación de suelas tricolores</p>
+                    </div>
+                    <div class="product-body">
+                        <p><strong>Materiales:</strong> TR, Expansos, PVC, Ranil y T.P.U. en bajas densidades</p>
+                        
+                        <h4>PORTAMOLDE</h4>
+                        <table class="specs-table">
+                            <tr>
+                                <th>Característica</th>
+                                <th>Unidad</th>
+                                <th>Valor</th>
+                            </tr>
+                            <tr>
+                                <td>Portamoldes</td>
+                                <td>No.</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td>Fuerza cierre molde</td>
+                                <td>KN</td>
+                                <td>1,500</td>
+                            </tr>
+                            <tr>
+                                <td>Apertura máxima entre los planos</td>
+                                <td>mm</td>
+                                <td>400</td>
+                            </tr>
+                            <tr>
+                                <td>Pasaje frontal entre las columnas</td>
+                                <td>mm</td>
+                                <td>410</td>
+                            </tr>
+                            <tr>
+                                <td>Dimensiones molde</td>
+                                <td>mm</td>
+                                <td>400 x 400</td>
+                            </tr>
+                            <tr>
+                                <td>Altura máxima molde</td>
+                                <td>mm</td>
+                                <td>80 / 180</td>
+                            </tr>
+                            <tr>
+                                <td>Altura de inyección regulable</td>
+                                <td>mm</td>
+                                <td>32 / 90</td>
+                            </tr>
+                        </table>
+                        
+                        <h4>INYECTOR</h4>
+                        <table class="specs-table">
+                            <tr>
+                                <th>Característica</th>
+                                <th>Unidad</th>
+                                <th>Valor</th>
+                            </tr>
+                            <tr>
+                                <td>Número de extrusores</td>
+                                <td>No.</td>
+                                <td>6</td>
+                            </tr>
+                            <tr>
+                                <td>Diámetro del extrusión</td>
+                                <td>mm</td>
+                                <td>60 / 65</td>
+                            </tr>
+                            <tr>
+                                <td>Relación L/D tornillo</td>
+                                <td></td>
+                                <td>16.66 / 15.38</td>
+                            </tr>
+                            <tr>
+                                <td>Capacidad de plastificación</td>
+                                <td>kg/h</td>
+                                <td>45</td>
+                            </tr>
+                            <tr>
+                                <td>Volumen de inyección</td>
+                                <td></td>
+                                <td>750 / 1,000</td>
+                            </tr>
+                            <tr>
+                                <td>Velocidad de extrusión</td>
+                                <td>R.P.M.</td>
+                                <td>226</td>
+                            </tr>
+                            <tr>
+                                <td>Par del tornillo</td>
+                                <td>daNm</td>
+                                <td>56</td>
+                            </tr>
+                            <tr>
+                                <td>Zonas de calentamiento</td>
+                                <td>N°</td>
+                                <td>12</td>
+                            </tr>
+                        </table>
+                        
+                        <h4>POTENCIA INSTALADA</h4>
+                        <table class="specs-table">
+                            <tr>
+                                <th>Característica</th>
+                                <th>Unidad</th>
+                                <th>Valor</th>
+                            </tr>
+                            <tr>
+                                <td>Calentamiento inyectores</td>
+                                <td>kw</td>
+                                <td>18</td>
+                            </tr>
+                            <tr>
+                                <td>Motores inyectores</td>
+                                <td>kw</td>
+                                <td>90</td>
+                            </tr>
+                            <tr>
+                                <td>Motores central hidráulica</td>
+                                <td>kw</td>
+                                <td>15+11/30+22</td>
+                            </tr>
+                            <tr>
+                                <td>Potencia instalada total</td>
+                                <td>kw</td>
+                                <td>136 / 162</td>
+                            </tr>
+                        </table>
+                        
+                        <h4>CONSUMO MEDIO</h4>
+                        <table class="specs-table">
+                            <tr>
+                                <th>Característica</th>
+                                <th>Unidad</th>
+                                <th>Valor</th>
+                            </tr>
+                            <tr>
+                                <td>Energía eléctrica</td>
+                                <td>kw/h</td>
+                                <td>34 / 48</td>
+                            </tr>
+                            <tr>
+                                <td>Aire</td>
+                                <td>Nl/min</td>
+                                <td>100</td>
+                            </tr>
+                            <tr>
+                                <td>Frigorías</td>
+                                <td>Frig/h</td>
+                                <td>10,000</td>
+                            </tr>
+                        </table>
+                        
+                        <h4>PESO Y DIMENSIONES</h4>
+                        <table class="specs-table">
+                            <tr>
+                                <th>Característica</th>
+                                <th>Unidad</th>
+                                <th>Valor</th>
+                            </tr>
+                            <tr>
+                                <td>Peso neto total</td>
+                                <td>kg.</td>
+                                <td>7,500</td>
+                            </tr>
+                            <tr>
+                                <td>Anchura</td>
+                                <td>mm</td>
+                                <td>2,700</td>
+                            </tr>
+                            <tr>
+                                <td>Longitud</td>
+                                <td>mm</td>
+                                <td>2,500</td>
+                            </tr>
+                            <tr>
+                                <td>Altura</td>
+                                <td>mm</td>
+                                <td>2,250</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Modelo BICOLOR -->
+                <div class="product-card">
+                    <div class="product-header">
+                        <h3>MODELO BICOLOR</h3>
+                        <p>Máquina para fabricación de suelas bicolores</p>
+                    </div>
+                    <div class="product-body">
+                        <p><strong>Materiales:</strong> TR, Expansos, PVC, Ranil y T.P.U. en bajas densidades</p>
+                        
+                        <h4>PORTAMOLDE</h4>
+                        <table class="specs-table">
+                            <tr>
+                                <th>Característica</th>
+                                <th>Unidad</th>
+                                <th>Valor</th>
+                            </tr>
+                            <tr>
+                                <td>Portamoldes</td>
+                                <td>No.</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td>Fuerza cierre molde</td>
+                                <td>kN</td>
+                                <td>1,500</td>
+                            </tr>
+                            <tr>
+                                <td>Apertura máxima entre los planos</td>
+                                <td>mm</td>
+                                <td>400</td>
+                            </tr>
+                            <tr>
+                                <td>Pasaje frontal entre las columnas</td>
+                                <td>mm</td>
+                                <td>410</td>
+                            </tr>
+                            <tr>
+                                <td>Dimensiones molde</td>
+                                <td>mm</td>
+                                <td>400 x 400</td>
+                            </tr>
+                            <tr>
+                                <td>Altura máxima molde</td>
+                                <td>mm</td>
+                                <td>80 / 180</td>
+                            </tr>
+                            <tr>
+                                <td>Altura de inyección regulable</td>
+                                <td>mm</td>
+                                <td>32 / 90</td>
+                            </tr>
+                        </table>
+                        
+                        <h4>INYECTOR</h4>
+                        <table class="specs-table">
+                            <tr>
+                                <th>Característica</th>
+                                <th>Unidad</th>
+                                <th>Valor</th>
+                            </tr>
+                            <tr>
+                                <td>Número de extrusores</td>
+                                <td>No.</td>
+                                <td>4</td>
+                            </tr>
+                            <tr>
+                                <td>Diámetro del extrusión</td>
+                                <td>mm</td>
+                                <td>60 / 65</td>
+                            </tr>
+                            <tr>
+                                <td>Relación L/D tornillo</td>
+                                <td></td>
+                                <td>16.66 / 15.38</td>
+                            </tr>
+                            <tr>
+                                <td>Capacidad de plastificación</td>
+                                <td>kg/h</td>
+                                <td>45</td>
+                            </tr>
+                            <tr>
+                                <td>Volumen de inyección</td>
+                                <td></td>
+                                <td>750 / 1,000</td>
+                            </tr>
+                            <tr>
+                                <td>Velocidad de extrusión</td>
+                                <td>R.P.M.</td>
+                                <td>226</td>
+                            </tr>
+                            <tr>
+                                <td>Par del tornillo</td>
+                                <td>daNm</td>
+                                <td>56</td>
+                            </tr>
+                            <tr>
+                                <td>Zonas de calentamiento</td>
+                                <td>N°</td>
+                                <td>12</td>
+                            </tr>
+                        </table>
+                        
+                        <h4>POTENCIA INSTALADA</h4>
+                        <table class="specs-table">
+                            <tr>
+                                <th>Característica</th>
+                                <th>Unidad</th>
+                                <th>Valor</th>
+                            </tr>
+                            <tr>
+                                <td>Calentamiento inyectores</td>
+                                <td>kw</td>
+                                <td>15.8</td>
+                            </tr>
+                            <tr>
+                                <td>Motores inyectores</td>
+                                <td>kw</td>
+                                <td>22</td>
+                            </tr>
+                            <tr>
+                                <td>Motores central hidráulica</td>
+                                <td>kw</td>
+                                <td>15+2.2</td>
+                            </tr>
+                            <tr>
+                                <td>Potencia instalada total</td>
+                                <td>kw</td>
+                                <td>61</td>
+                            </tr>
+                        </table>
+                        
+                        <h4>CONSUMO MEDIO</h4>
+                        <table class="specs-table">
+                            <tr>
+                                <th>Característica</th>
+                                <th>Unidad</th>
+                                <th>Valor</th>
+                            </tr>
+                            <tr>
+                                <td>Energía eléctrica</td>
+                                <td>kw/h</td>
+                                <td>27</td>
+                            </tr>
+                            <tr>
+                                <td>Aire</td>
+                                <td>Nl/min</td>
+                                <td>100</td>
+                            </tr>
+                            <tr>
+                                <td>Frigorías</td>
+                                <td>Frig/h</td>
+                                <td>10,000</td>
+                            </tr>
+                        </table>
+                        
+                        <h4>PESO Y DIMENSIONES</h4>
+                        <table class="specs-table">
+                            <tr>
+                                <th>Característica</th>
+                                <th>Unidad</th>
+                                <th>Valor</th>
+                            </tr>
+                            <tr>
+                                <td>Peso neto total</td>
+                                <td>kg.</td>
+                                <td>6,000</td>
+                            </tr>
+                            <tr>
+                                <td>Anchura</td>
+                                <td>mm</td>
+                                <td>2,300</td>
+                            </tr>
+                            <tr>
+                                <td>Longitud</td>
+                                <td>mm</td>
+                                <td>2,300</td>
+                            </tr>
+                            <tr>
+                                <td>Altura</td>
+                                <td>mm</td>
+                                <td>2,300</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galería de imágenes -->
+    <section id="galeria" class="gallery">
+        <div class="container">
+            <div class="section-title">
+                <h2>Nuestras Máquinas</h2>
+                <p>Conoce nuestros modelos en acción</p>
+            </div>
+            
+            <div class="gallery-container">
+                <div class="gallery-item">
+                    <img src="https://i.postimg.cc/yYV8VX2s/Maquina-tricolor.png" alt="Máquina de inyección TRICOLOR">
+                    <div class="gallery-overlay">
+                        <h3>MODELO TRICOLOR</h3>
+                        <p>Máquina para suelas tricolores</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="https://i.postimg.cc/kGMPdwGH/MAQUINA-BICOLOR.jpg" alt="Máquina de inyección BICOLOR">
+                    <div class="gallery-overlay">
+                        <h3>MODELO BICOLOR</h3>
+                        <p>Máquina para suelas bicolores</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="https://i.postimg.cc/MZ01P5yS/REFACCIONES.webp" alt="Refacciones y componentes">
+                    <div class="gallery-overlay">
+                        <h3>Refacciones y Componentes</h3>
+                        <p>Todo lo necesario para tu máquina</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contacto</h2>
+                <p>Estamos aquí para responder tus preguntas</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Información de Contacto</h3>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt contact-icon"></i>
+                            <div>
+                                <h4>Dirección</h4>
+                                <p>Vicente Suárez No. 108 · Col. Los Reyes · C.P. 37190</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone-alt contact-icon"></i>
+                            <div>
+                                <h4>Teléfono</h4>
+                                <p>52 (477) 779.56.03</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope contact-icon"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p>eastmachines@hotmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="whatsapp-contact">
+                        <h4>¡Listo para mejorar tu producción!</h4>
+                        <p>Resuelve tus dudas directamente con nuestros especialistas y cotiza</p>
+                        <a href="https://wa.me/524778960170" class="btn" target="_blank">
+                            <i class="fab fa-whatsapp"></i> Contactar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+                <div class="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3736.450594250094!2d-101.6524159246504!3d20.5062725032381!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842c9f8e8e5e3a1b%3A0x9a6a3d7a8d9b3b1a!2sVicente%20Su%C3%A1rez%20108%2C%20Los%20Reyes%2C%2037190%20Le%C3%B3n%2C%20Gto.!5e0!3m2!1ses!2smx!4v1689999999999!5m2!1ses!2smx" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Middle East Machines</h3>
+                    <p>Especialistas en máquinas de inyección para la fabricación de suelas con más de 10 años de experiencia importando desde Turquía.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Enlaces Rápidos</h3>
+                    <p><a href="#inicio">Inicio</a></p>
+                    <p><a href="#nosotros">Sobre Nosotros</a></p>
+                    <p><a href="#productos">Productos</a></p>
+                    <p><a href="#galeria">Galería</a></p>
+                    <p><a href="#contacto">Contacto</a></p>
+                </div>
+                <div class="footer-section">
+                    <h3>Contacto</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Vicente Suárez No. 108, Col. Los Reyes, C.P. 37190</p>
+                    <p><i class="fas fa-phone-alt"></i> 52 (477) 779.56.03</p>
+                    <p><i class="fas fa-envelope"></i> eastmachines@hotmail.com</p>
+                    <p><i class="fab fa-whatsapp"></i> (477) 896-0170</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Middle East Machines. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling para los enlaces del menú
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Animación para los elementos al hacer scroll
+        const observerOptions = {
+            threshold: 0.1
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animated');
+                }
+            });
+        }, observerOptions);
+        
+        document.querySelectorAll('.feature-card, .product-card, .choose-card, .gallery-item').forEach(card => {
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>
